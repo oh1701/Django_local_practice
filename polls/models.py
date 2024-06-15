@@ -11,7 +11,7 @@ class Question(models.Model):
 
 class TestModel(models.Model):
     def __str__(self):
-        return f"{self.question}"
+        return f"{self.choice_text}"
 
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=100)
